@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7f38a934-1190-4ebd-81da-ac2fa79ce9da">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode_cuti" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM `persetujuan` WHERE kode_cuti = $P{kode_cuti}
+]]>
+	</queryString>
+	<field name="kode_cuti" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_karyawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nis" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diajukan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disetujui" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="175" splitType="Stretch">
+			<image>
+				<reportElement uuid="e0eb6c97-2f53-47c7-ab41-180034a41188" x="14" y="17" width="119" height="86"/>
+				<imageExpression><![CDATA["C:\\Users\\test\\Documents\\NetBeansProjects\\CutiKaryawan\\src\\ireport\\huruf g.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="cabee218-b74c-46d9-8779-81c5bf77bcea" x="430" y="17" width="125" height="99"/>
+				<imageExpression><![CDATA["C:\\Users\\test\\Documents\\NetBeansProjects\\CutiKaryawan\\src\\ireport\\hurufff.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="b1335b69-85af-4c1f-9d47-4682c7ab955e" x="101" y="17" width="342" height="38"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="22"/>
+				</textElement>
+				<text><![CDATA[Laporan Persetujuan Cuti Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa2d3dbd-9fb4-48e8-995c-a39f65e8c49e" x="126" y="55" width="286" height="40"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Glory Swalayan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a6ed1ae-5b98-435a-8e3e-3e22cccab5bd" x="144" y="83" width="268" height="62" forecolor="#666666"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jalan KH Wahid Hasyim No. 63 Dusun Talunrejo, RT.03/RW.01, Talunrejo, Sembulung, Cluring, Kabupaten Banyuwangi, Jawa Timur 68482]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="2a34689d-903f-45e7-9178-1aeadf5e3c7e" x="455" y="155" width="100" height="20" forecolor="#666666"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="c1a107e1-9e76-4d37-a407-fa7c2698204a" x="57" y="143" width="414" height="1"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6df13854-890a-432b-ba5b-71f5b91fc447" x="32" y="22" width="63" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Cuti]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3f766027-13ef-4ca1-a4c1-def6ecde0a3a" x="32" y="55" width="81" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode_cuti}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0e504f0d-05cd-4c11-95d2-d4495acd3fe8" x="144" y="22" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="30d3c7cc-0788-4d79-8ea7-384a6022463a" x="144" y="55" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_karyawan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d1b899d8-d646-4c04-8f1c-169ad5a6f0d8" x="270" y="22" width="45" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0d9c48da-a686-495c-b402-40fe2bc92ac3" x="270" y="55" width="45" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4f3e049e-653c-4e48-9d0b-8cd6fed2fd9f" x="343" y="22" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Diajukan Oleh]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="39f1d9c3-dde1-42fd-82cf-e1cba2c629ba" x="343" y="55" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{diajukan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9eda6b86-fa50-4bd2-8dde-54cb59dba4c5" x="455" y="22" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Disetujui Oleh]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="84e04649-76f9-437a-a204-1a204b51d1f9" x="455" y="55" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{disetujui}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d76dd61d-248d-4106-8200-4baabc7dd2f1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select *from data_cuti Where kode = $P{kode}]]>
+	</queryString>
+	<field name="kode" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alasan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="awal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="akhir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="212" splitType="Stretch">
+			<image>
+				<reportElement uuid="e0eb6c97-2f53-47c7-ab41-180034a41188" x="12" y="14" width="119" height="86"/>
+				<imageExpression><![CDATA["C:\\Users\\test\\Documents\\NetBeansProjects\\CutiKaryawan\\src\\ireport\\huruf g.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="cabee218-b74c-46d9-8779-81c5bf77bcea" x="417" y="14" width="125" height="99"/>
+				<imageExpression><![CDATA["C:\\Users\\test\\Documents\\NetBeansProjects\\CutiKaryawan\\src\\ireport\\hurufff.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="b1335b69-85af-4c1f-9d47-4682c7ab955e" x="131" y="14" width="286" height="42"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Cuti Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa2d3dbd-9fb4-48e8-995c-a39f65e8c49e" x="131" y="60" width="286" height="40"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[Glory Swalayan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a6ed1ae-5b98-435a-8e3e-3e22cccab5bd" x="149" y="100" width="268" height="62" forecolor="#666666"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jalan KH Wahid Hasyim No. 63 Dusun Talunrejo, RT.03/RW.01, Talunrejo, Sembulung, Cluring, Kabupaten Banyuwangi, Jawa Timur 68482]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement uuid="ad138664-807a-4e36-9f9b-3857992f9afe" x="404" y="192" width="100" height="20" forecolor="#666666"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="aa2caa80-e2b2-401f-8c87-4cb0b7953061" x="52" y="158" width="409" height="1"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="244" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0521e818-609c-4620-966b-fe339bd566aa" x="12" y="54" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1a162c98-c772-4ba5-8455-f835227b2d89" x="12" y="10" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Cuti]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d10ed2a3-ecc8-4fd8-900c-dcc41a548a6a" x="100" y="54" width="85" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e3d9a121-cb93-4eee-81a2-30b16beb4427" x="100" y="10" width="85" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b4d36002-7877-444c-929b-f965daba5e1f" x="218" y="54" width="60" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="40577e3b-9bc5-486e-ae9c-ac24af26fc1d" x="218" y="10" width="60" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5ac15004-6a99-459c-b57d-1fa842468f0d" x="317" y="54" width="71" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9b0f1466-7fc1-440c-9355-c3d03916711f" x="317" y="10" width="71" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="304897db-b76e-4bdd-873e-093cf67e7f19" x="438" y="216" width="117" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alasan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d34bc812-ca18-4586-85af-bb348cb2dbce" x="317" y="216" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Alasan Cuti            :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8dec32c7-902e-45bb-8d7b-90563da84989" x="417" y="54" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5c47fde4-ded6-4ec4-bdd2-6a18bff73962" x="417" y="10" width="76" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jumlah Cuti]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ca509e06-5bce-4dd6-9be1-e71a94c7a1ee" x="438" y="126" width="117" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{awal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b1fb9d18-03fa-4415-8fce-9c08f92994d9" x="317" y="126" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal Mulai Cuti :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e27d5967-8f60-49e4-b095-9f6c46cb5ccc" x="438" y="173" width="117" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{akhir}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="40db5f6f-a8cb-4d27-9d6d-24dce4fc480e" x="317" y="173" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal Akhir Cuti :]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="03d15f6b-1be2-4c9f-a2e9-c19f67860310">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nik" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *  FROM gaji Where nik = $P{nik}]]>
+	</queryString>
+	<field name="nik" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="204" splitType="Stretch">
+			<image>
+				<reportElement uuid="e0eb6c97-2f53-47c7-ab41-180034a41188" x="20" y="15" width="119" height="86"/>
+				<imageExpression><![CDATA["C:\\Users\\test\\Documents\\NetBeansProjects\\CutiKaryawan\\src\\ireport\\huruf g.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="cabee218-b74c-46d9-8779-81c5bf77bcea" x="430" y="15" width="125" height="99"/>
+				<imageExpression><![CDATA["C:\\Users\\test\\Documents\\NetBeansProjects\\CutiKaryawan\\src\\ireport\\hurufff.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="b1335b69-85af-4c1f-9d47-4682c7ab955e" x="141" y="23" width="286" height="42"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Gaji Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa2d3dbd-9fb4-48e8-995c-a39f65e8c49e" x="141" y="65" width="286" height="40"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18"/>
+				</textElement>
+				<text><![CDATA[Glory Swalayan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a6ed1ae-5b98-435a-8e3e-3e22cccab5bd" x="141" y="101" width="268" height="62" forecolor="#666666"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jalan KH Wahid Hasyim No. 63 Dusun Talunrejo, RT.03/RW.01, Talunrejo, Sembulung, Cluring, Kabupaten Banyuwangi, Jawa Timur 68482]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="3ac018c5-335a-4385-9c96-40dbf2fadaba" x="53" y="156" width="431" height="1"/>
+			</line>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement uuid="9eafabb5-3900-4980-b2cd-d1bbdd039380" x="427" y="184" width="100" height="20" forecolor="#999999"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="206" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a77d8315-3cbf-4865-984e-f7cc60019a5e" x="41" y="10" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4876076f-d273-43c6-9216-60d5a5383565" x="41" y="43" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nik}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="506b38a1-f864-43a8-9cc6-dae8d4b84ac5" x="158" y="10" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="997054cc-d5e2-4d56-ba2f-1304d0db0c83" x="158" y="43" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d036e27b-c684-44f7-997d-ae81504bb11b" x="309" y="10" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1635ff9a-2375-4dc2-bbaf-352490d06ab6" x="309" y="43" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="749faed2-ca30-44d3-b9aa-6154daea8de8" x="430" y="10" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="795f7989-adbb-4e98-94ed-ee7ce142f1a5" x="430" y="43" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7a147ee2-3a00-473c-99c7-23804de7c0ef" x="391" y="105" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Gaji : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d9c4fc58-ebb4-4934-8fd6-5bab6604dbdc" x="430" y="105" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{gaji}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
